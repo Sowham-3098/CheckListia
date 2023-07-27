@@ -7,6 +7,7 @@ This is a simple web-based To-Do List application built using HTML, CSS, and Jav
 - Mark as completed: By clicking on a task in the list, it can be marked as completed, and a strike-through line will be applied to the task.
 - Remove tasks: Users can click on the "x" icon next to a task to remove it from the list.
 - Persistent storage: The list of tasks is saved in the browser's local storage, so the tasks will be retained even if the page is refreshed or reopened.
+- Dark Mode/Light Mode: Click the button at corner to toggle the button
 
 ## How to Use
 
