@@ -1,5 +1,4 @@
 # Check Listia 📝
-
 This is a simple web-based To-Do List application built using HTML, CSS, and JavaScript. The app allows users to add tasks to a list, mark them as completed, and remove them from the list.
 
 ## Features
@@ -38,3 +37,5 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 ## Acknowledgments
 
 Special thanks to anyone whose code or resources were used in this project.
+
+![Screenshot (9)](https://github.com/Sowham-3098/CheckListia/assets/95470604/0d02f429-4594-4768-8453-8d0721d77731)
