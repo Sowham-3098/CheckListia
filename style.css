@@ -227,6 +227,12 @@ ul li span:hover {
     padding: 30px;
 
   }
+  .todo-app h2 {
+    
+    margin-bottom:30px;
+    font-size: 25px;
+  }
+  
 
   .row {
     flex-direction: column;
@@ -245,3 +251,4 @@ ul li span:hover {
     width: 100%;
 
   }
+}
