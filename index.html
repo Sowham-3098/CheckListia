@@ -10,11 +10,16 @@
 
 <body>
   <div class="container">
+
     <div class="todo-app">
-      <h2>To Do List <img src="icon.png"></h2>
+      <h2>To Do List <img src="icon.png">
+      </h2> <button id="dark-mode-button">
+        <img src="dark.png" alt="Toggle Dark Mode">
+      </button>
+     
       <div class="row">
         <input type="text" id="input-box" placeholder="Add your text">
-        <button onclick="addTask()">Add</button>
+        <button id="add-button" onclick="addTask()">Add</button>
       </div>
       <ul id="list-container">
         <!-- <li class="checked">Task 1</li>
@@ -24,11 +29,16 @@
 
       </ul>
     </div>
+    <footer class="made-with-love">
+      Made with ❤️ by Sowham
+    </footer>
   </div>
+
+
 
   <script src="script.js"></script>
 
- 
+
 </body>
 
 </html>

@@ -1,40 +1,81 @@
-*{
+* {
   margin: 0;
-  padding:0;
-  font-family:'Poppins', sans-serif;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
-.container{
+
+.container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #153677,#4e085f);
-   padding:10px;
+  background: linear-gradient(135deg, #122f6a, #530d65);
+  padding: 10px;
+  position: relative;
 
 }
-.todo-app{
+
+.head {
+  display: flex;
+}
+
+.dark-mode .container {
+  background: linear-gradient(135deg, #6c9af5, #ae4cc6);
+  padding: 10px;
+}
+
+#dark-mode-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 8px 8px 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#dark-mode-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.todo-app {
   width: 100%;
-  max-width:540px;
+  max-width: 540px;
   background: #ffff;
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
+
+  /* background: rgba(255, 255, 255, 0.907);
+   /* box-shadow: 0 4px 30px rgba(0, 3, 4, 0.1); 
+  backdrop-filter: blur(5px); */
 }
-.todo-app h2{
+
+.dark-mode .todo-app {
+  background: rgb(45, 45, 98);
+}
+
+.todo-app h2 {
   color: #002765;
   display: flex;
   align-items: center;
-  justify-content:center;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 45px;
   font-size: 30px;
 }
 
-.todo-app h2 img{
+.dark-mode .todo-app h2 {
+  color: whitesmoke;
+}
+
+.todo-app h2 img {
   width: 30px;
   margin-left: 10px;
-  
+
 }
-.row{
-  display:flex;
+
+.row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   background: #edeef0;
@@ -43,33 +84,48 @@
   margin-bottom: 25px;
 }
 
-input{
+
+input {
   flex: 1;
   border: none;
   outline: none;
   background: transparent;
-  padding:10px;
-  
+  padding: 10px;
+  font-size: 15px;
+
+
 }
-button{
-  border:none;
-  outline:none;
+
+#add-button {
+  border: none;
+  outline: none;
   padding: 16px 50px;
   background: #ff5945;
-  color:#fff;
+  color: #fff;
   font-size: 16px;
   cursor: pointer;
   border-radius: 40px;
 }
-ul li{
+
+.dark-mode #add-button {
+  background: #6c9af5;
+}
+
+ul li {
   list-style: none;
   font-size: 17px;
   padding: 12px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
-  position:relative;
+  position: relative;
+  color: black;
 }
-ul li::before{
+
+.dark-mode ul li {
+  color: white;
+}
+
+ul li::before {
   content: '';
   position: absolute;
   height: 28px;
@@ -78,30 +134,114 @@ ul li::before{
   background-image: url(unchecked.png);
   background-size: cover;
   background-position: center;
-  top:8px;
+  top: 8px;
   left: 12px;
 }
-ul li.checked{
-  color: #555;
+
+ul li.checked {
+  color: #be6902;
   text-decoration: line-through;
 }
-ul li.checked::before{
+
+ul li.checked::before {
   background-image: url(checked.png);
 }
- ul li span{
-   position: absolute;
-   right: 0;
-   top: 5px;
-   width: 40px;
-   height: 40px;
-   font-size: 22px;
-   color: #555;
-   line-height: 40px;
-   text-align:center;
-   border-radius: 50%;
-   
- }
-ul li span:hover{
-  background: #edeef0;
-  
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+
 }
+
+.dark-mode ul li span {
+  color: white;
+}
+
+ul li span:hover {
+  background: #edeef0;
+
+}
+
+.dark-mode ul li span:hover {
+  color: rgb(29, 110, 172);
+}
+
+.made-with-love {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  color: #edeef0;
+  padding: 10px 0;
+}
+
+.dark-mode .made-with-love {
+  color: black;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 500px) {
+  .container {
+    position: relative;
+  }
+
+  /* Style the dark mode image button */
+  #dark-mode-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  #dark-mode-button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .todo-app {
+    max-width: 90%;
+
+    margin: 50px auto 20px;
+
+    padding: 30px;
+
+  }
+
+  .row {
+    flex-direction: column;
+
+    padding: 5px;
+  }
+
+  input {
+    width: 100%;
+
+    margin-bottom: 10px;
+    margin-top: 10px
+  }
+
+  #add-button {
+    width: 100%;
+
+  }
