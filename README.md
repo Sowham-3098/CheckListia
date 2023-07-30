@@ -39,4 +39,7 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 
 Special thanks to anyone whose code or resources were used in this project.
 
-![Screenshot (9)](https://github.com/Sowham-3098/CheckListia/assets/95470604/0d02f429-4594-4768-8453-8d0721d77731)
+## Screenshot of the project interface
+
+![Screenshot (14)](https://github.com/Sowham-3098/CheckListia/assets/95470604/8e13cc1e-66c8-416e-828f-6bafa9c02cab)
+
